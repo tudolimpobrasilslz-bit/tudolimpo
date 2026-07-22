@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- === OTIMIZAÇÃO DE SEO === -->
+    <title>Tudo Limpo | Especialistas em Higienização de Estofados em São Luís - MA</title>
+    <meta name="description" content="A Tudo Limpo é especialista em higienização profunda de estofados, limpeza de sofás, lavagem de tapetes, blindagem e limpeza pós-obra em São Luís - MA.">
+    <meta name="keywords" content="higienização de estofados são luís, limpeza de sofá são luís ma, impermeabilização de sofá, lavagem de tapetes são luís, limpeza pós obra ma, higienizar colchão, tudo limpo brasil">
+    <meta name="author" content="Tudo Limpo Brasil">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.imgur.com/pJsTF6j.png">
+
+    <!-- Open Graph (Para ficar bonito ao enviar no WhatsApp/Redes Sociais) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tudo Limpo | Alto Padrão em Higienização em São Luís">
+    <meta property="og:description" content="Especialistas em higienização profunda de estofados, limpeza de sofás e limpeza pós-obra. Solicite seu orçamento rápido!">
+    <meta property="og:image" content="https://i.imgur.com/GXzUJhY.png">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Dados Estruturados Schema.org para o Google (SEO Local) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Tudo Limpo Brasil",
+      "image": "https://i.imgur.com/GXzUJhY.png",
+      "telephone": "+5598992103535",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "São Luís",
+        "addressRegion": "MA",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "08:00",
+          "closes": "19:00"
+        }
+      ],
+      "priceRange": "$$"
+    }
+    </script>
+    <!-- === FIM DO SEO === -->
+
+    <!-- Fonte Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome para os ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* --- 1. DESIGN SYSTEM & VARIÁVEIS --- */
+        :root {
+            --primary: #00478F; /* Azul Premium */
+            --offwhite: #F8F9FA;
+            --amber: #D4AF37; /* Dourado */
+            --amber-escuro: #b5952f;
+            --text-dark: #1A1A1A;
+            --text-light: #666666;
+            --header-bg: #FFFFFF; 
+            --verde-ok: #3f6b4f;
+            --borda: #e3ddd1;
+            --radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--offwhite);
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding-top: 80px;
+            overflow-x: hidden;
+        }
+
+        a { text-decoration: none; }
+        ul { list-style: none; }
+
+        /* --- 2. CABEÇALHO (LOGO CENTRALIZADA) --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--header-bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 5%;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo-img { 
+            height: 50px; 
+            object-fit: contain;
+            display: block;
+        }
+
+        /* --- 3. SESSÃO HERO (BANNER COM FORMULÁRIO) --- */
+        .hero {
+            min-height: calc(100vh - 80px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 5%;
+            background: linear-gradient(to right, rgba(0, 71, 143, 0.95) 35%, rgba(0, 71, 143, 0.7)), 
+                        url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1920&q=80') center/cover;
+            gap: 40px;
+        }
+
+        .hero-content { 
+            width: 50%;
+            max-width: 600px;
+        }
+        .tagline { color: var(--amber); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 0.9rem; margin-bottom: 10px; display: block; }
+        .hero h1 { font-size: 3.5rem; color: white; line-height: 1.1; margin-bottom: 20px; font-weight: 700; }
+        .hero p { font-size: 1.2rem; color: rgba(255, 255, 255, 0.95); margin-bottom: 40px; }
+
+        .hero-form-wrapper { width: 45%; max-width: 500px; z-index: 10; }
+
+        /* --- FORMULÁRIO INTELIGENTE --- */
+        .card { background: #fff; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); overflow: hidden; width: 100%; }
+        
+        .trilha { display: flex; align-items: center; gap: 8px; padding: 24px 24px 0; }
+        .segmento { height: 6px; flex: 1; background: #eee; border-radius: 4px; overflow: hidden; }
+        .preenchido { height: 100%; width: 0%; background: var(--amber); border-radius: 4px; transition: width .4s ease; }
+        .legenda { font-size: 12px; color: var(--text-light); white-space: nowrap; font-weight: 700; }
+
+        .etapa { padding: 20px 24px 30px; }
+        .etapa.oculta { display: none; }
+        .etapa-titulo { font-size: 24px; font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+        .etapa-ajuda { font-size: 13.5px; color: var(--text-light); margin-bottom: 20px; }
+        .etapa-ajuda.tempo { color: var(--verde-ok); font-weight: 600; }
+
+        .campo { margin-bottom: 16px; text-align: left; }
+        .campo label { display: block; font-size: 13px; font-weight: 600; color: var(--text-dark); margin-bottom: 6px; }
+        .campo .opcional-tag { font-weight: 400; color: var(--text-light); font-size: 12px; }
+
+        input[type="text"], input[type="tel"], textarea {
+            width: 100%; padding: 13px 14px; border: 1.5px solid var(--borda); border-radius: var(--radius);
+            font-size: 15px; color: var(--text-dark); background: #fcfaf7; transition: all .15s ease;
+        }
+        input:focus, textarea:focus { outline: none; border-color: var(--primary); background: #fff; }
+        
+        .grade-servico { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .opcao-servico { position: relative; }
+        .opcao-servico input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+        .opcao-servico .rotulo {
+            display: flex; align-items: center; gap: 8px; padding: 12px 10px; border: 1.5px solid var(--borda);
+            border-radius: var(--radius); font-size: 13px; font-weight: 600; color: var(--text-dark);
+            background: #fcfaf7; transition: all .15s ease; cursor: pointer; user-select: none;
+        }
+        .opcao-servico input:checked + .rotulo { border-color: var(--primary); background: rgba(0, 71, 143, 0.05); color: var(--primary); }
+
+        .grupo-fotos { display: flex; gap: 10px; }
+        .grupo-fotos .opcao-servico .rotulo { justify-content: center; }
+
+        .btn-principal {
+            width: 100%; padding: 15px 18px; background: var(--amber); color: #fff; font-size: 15.5px;
+            font-weight: 700; border-radius: var(--radius); margin-top: 10px; display: flex; align-items: center;
+            justify-content: center; gap: 8px; border: none; cursor: pointer; transition: background .15s ease;
+        }
+        .btn-principal:hover { background: var(--amber-escuro); }
+
+        .btn-voltar { background: transparent; color: var(--text-light); font-size: 13px; font-weight: 600; padding: 0 0 10px 0; display: flex; align-items: center; gap: 4px; border: none; cursor: pointer; }
+        .btn-voltar:hover { color: var(--primary); }
+
+        .confianca { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 16px; justify-content: center; }
+        .confianca span { font-size: 11px; color: var(--text-light); display: flex; align-items: center; gap: 5px; }
+        .confianca span::before { content: "✓"; color: var(--verde-ok); font-weight: 700; }
+        .erro { font-size: 12px; color: #b33a2e; margin-top: 4px; display: none; }
+        .campo.invalido input { border-color: #b33a2e; }
+        .campo.invalido .erro { display: block; }
+
+        .sucesso { text-align: center; padding: 40px 24px; display: none; }
+        .sucesso.visivel { display: block; }
+        .sucesso .icone-check { width: 60px; height: 60px; border-radius: 50%; background: #eaf3ec; color: var(--verde-ok); display: flex; align-items: center; justify-content: center; font-size: 30px; margin: 0 auto 16px; }
+        .sucesso h2 { font-size: 24px; margin-bottom: 10px; color: var(--primary); font-weight: 700; }
+        .sucesso p { font-size: 14px; color: var(--text-light); margin-bottom: 20px;}
+
+
+        /* --- 4. BENTO GRID MULTIMÍDIA (SERVIÇOS) --- */
+        .services { padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; font-size: 2.5rem; color: var(--primary); margin-bottom: 50px; font-weight: 700; }
+
+        .bento-grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 25px; 
+        }
+        
+        .bento-card { 
+            background: white;
+            border-radius: 16px; 
+            text-decoration: none; 
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06); 
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #eee;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .bento-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        .bento-media {
+            width: 100%;
+            height: 280px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .bento-media img, .bento-media video {
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; /* Preenche todo o espaço, sem bordas pretas */
+            display: block;
+            transition: transform 0.6s ease;
+        }
+        
+        .bento-card:hover .bento-media img, .bento-card:hover .bento-media video { transform: scale(1.05); }
+
+        /* Conteúdo do Cartão (Texto limpo embaixo) */
+        .bento-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .bento-content h3 { font-size: 1.5rem; color: var(--primary); margin-bottom: 10px; font-weight: 700; }
+        .bento-content p { color: var(--text-light); margin-bottom: 20px; font-size: 0.95rem; line-height: 1.6; flex-grow: 1; }
+        
+        .selo { display: inline-block; background: var(--amber); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; margin-bottom: 15px; width: fit-content; }
+        
+        .btn-servico {
+            display: block;
+            text-align: center;
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            transition: background 0.3s;
+            margin-top: auto;
+        }
+        .bento-card:hover .btn-servico { background-color: var(--amber); }
+
+        /* Lógica do Slider Automático (Card 1) */
+        .auto-slide-img {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .auto-slide-img.active { opacity: 1; }
+
+
+        /* --- 5. SOBRE A EMPRESA --- */
+        .about { padding: 100px 5%; max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 60px; }
+        .about-img { flex: 1; position: relative; }
+        .about-img img { 
+            width: 100%; 
+            max-width: 450px;
+            height: auto; 
+            display: block; 
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            margin: 0 auto;
+        }
+        .founder-badge {
+            position: absolute;
+            bottom: 20px;
+            right: 10%;
+            background: white;
+            padding: 15px 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+        .about-text { flex: 1; }
+        .about-text h2 { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; font-weight: 700; line-height: 1.2; }
+        .about-text p { font-size: 1.1rem; color: var(--text-light); margin-bottom: 20px; }
+
+
+        /* --- 6. DIFERENCIAIS --- */
+        .differentials { background-color: white; padding: 80px 5%; }
+        .diff-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; max-width: 1200px; margin: 0 auto; text-align: center; }
+        .diff-item h4 { font-size: 1.3rem; color: var(--primary); margin-bottom: 15px; font-weight: 700; }
+        .diff-item p { color: var(--text-light); }
+
+
+        /* --- 7. DÚVIDAS FREQUENTES (FAQ) --- */
+        .faq { padding: 80px 5%; max-width: 900px; margin: 0 auto; }
+        .faq-container { display: flex; flex-direction: column; gap: 16px; margin-top: 40px; }
+        .faq-item { background: white; border: 1px solid var(--borda); border-radius: 12px; overflow: hidden; transition: all 0.3s ease; }
+        .faq-question { width: 100%; padding: 22px 25px; display: flex; justify-content: space-between; align-items: center; background: none; border: none; font-size: 1.1rem; font-weight: 600; color: var(--primary); cursor: pointer; text-align: left; transition: background 0.3s ease; }
+        .faq-question:hover { background: #fcfaf7; }
+        .faq-question i { color: var(--amber); transition: transform 0.4s ease; font-size: 1.2rem; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; background: white; }
+        .faq-answer-content { padding: 0 25px 25px 25px; color: var(--text-light); font-size: 1.05rem; line-height: 1.7; }
+        
+        .faq-item.active { border-color: var(--amber); box-shadow: 0 10px 20px rgba(0,0,0,0.04); }
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
+
+
+        /* --- 8. PROVA SOCIAL (SLIDERS MULTIPLOS) --- */
+        .social-proof { padding: 80px 5%; max-width: 1200px; margin: 0 auto; text-align: center; }
+        
+        .sliders-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .slider-wrapper {
+            background: white;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+
+        .slider-title { font-size: 1.2rem; color: var(--primary); margin-bottom: 15px; font-weight: 700; }
+
+        .slider-container { 
+            position: relative; width: 100%; overflow: hidden; border-radius: 8px; aspect-ratio: 4/3; 
+        }
+        .slider-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+        .img-before { z-index: 1; }
+        .img-after { z-index: 2; clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%); }
+        .slider-input { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 3; opacity: 0; cursor: ew-resize; }
+        .slider-line { position: absolute; top: 0; left: 50%; bottom: 0; width: 4px; background: white; z-index: 2; transform: translateX(-50%); pointer-events: none; }
+        .slider-line::after { content: '< >'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--amber); color: white; border-radius: 50%; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 12px;}
+
+
+        /* --- 9. RODAPÉ ESCURO PROFISSIONAL --- */
+        footer { background-color: #111111; color: #cccccc; padding: 80px 5% 30px; font-size: 0.95rem; }
+        .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 60px; border-bottom: 1px solid #2a2a2a; padding-bottom: 50px; }
+        .footer-col h4 { color: var(--amber); font-size: 1.1rem; margin-bottom: 25px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-col .logo { margin-bottom: 20px; }
+        .footer-col .logo img { max-height: 65px; width: auto; display: block; }
+        .footer-info-extra { margin-top: 25px; font-size: 0.9rem; color: #999999; line-height: 1.8; }
+        .footer-info-extra p { display: flex; align-items: center; gap: 8px; }
+        .footer-info-extra i { color: var(--amber); width: 16px; text-align: center; }
+        .footer-info-extra strong { color: #e0e0e0; font-weight: 600; }
+        .footer-link { display: flex; align-items: center; gap: 12px; color: #cccccc; margin-bottom: 18px; transition: color 0.3s, transform 0.3s; text-decoration: none; width: fit-content; }
+        .footer-link:hover { color: white; transform: translateX(5px); }
+        .footer-link i { font-size: 1.3rem; color: var(--amber); width: 24px; text-align: center; }
+        .hours-list { list-style: none; padding: 0; margin: 0; background: rgba(255, 255, 255, 0.02); border-radius: 8px; padding: 15px 20px; border: 1px solid #222; }
+        .hours-list li { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #2a2a2a; }
+        .hours-list li:last-child { border-bottom: none; }
+        .hours-list .day { display: flex; align-items: center; gap: 10px; color: #e0e0e0; font-weight: 500; }
+        .hours-list .day i { color: var(--amber); font-size: 1.1rem; }
+        .hours-list .time { color: #999; font-size: 0.95rem; }
+        .footer-bottom { text-align: center; padding-top: 30px; font-size: 0.85rem; color: #666666; }
+
+        /* --- 10. WHATSAPP FLUTUANTE --- */
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 2px 2px 15px rgba(0,0,0,0.2); z-index: 9999; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+
+        /* --- RESPONSIVIDADE CELULAR --- */
+        @media (max-width: 900px) {
+            .hero { flex-direction: column; text-align: center; padding: 40px 5%; justify-content: center; min-height: auto;}
+            .hero-content { width: 100%; margin-bottom: 40px; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero-form-wrapper { width: 100%; max-width: 100%; }
+            
+            .bento-grid { grid-template-columns: 1fr; }
+            .about { flex-direction: column; text-align: center; gap: 40px; }
+            .founder-badge { right: 50%; transform: translateX(50%); bottom: -20px; width: max-content; }
+            .diff-container { grid-template-columns: 1fr; }
+            .sliders-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-grid { grid-template-columns: 1fr; text-align: left; gap: 50px; }
+            .footer-col .logo img { margin: 0; }
+            .footer-link { justify-content: flex-start; }
+            .hours-list li { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho Apenas Logo -->
+    <header>
+        <img src="https://i.imgur.com/GXzUJhY.png" alt="Tudo Limpo Logo" class="logo-img">
+    </header>
+
+    <!-- Sessão Hero (Banner + Formulário) -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="tagline">HIGIENIZAÇÃO E BLINDAGEM PREMIUM</span>
+            <h1>Seu estofado impecável, protegido e livre de ácaros.</h1>
+            <p>Não mascaramos a sujeira, nós a extraímos. Através de uma tecnologia avançada, eliminamos manchas, odores e bactérias invisíveis a olho nu, garantindo um ambiente mais saudável e renovado para sua família.</p>
+        </div>
+
+        <!-- Início do Formulário Inteligente -->
+        <div class="hero-form-wrapper">
+            <div class="card">
+                <div class="trilha" id="trilha">
+                    <div class="segmento"><div class="preenchido" id="barra1"></div></div>
+                    <div class="segmento"><div class="preenchido" id="barra2"></div></div>
+                    <span class="legenda" id="legendaEtapa">Etapa 1 de 2</span>
+                </div>
+
+                <!-- ETAPA 1 -->
+                <form id="etapa1" class="etapa">
+                    <div class="etapa-titulo">Orçamento Rápido</div>
+                    <div class="etapa-ajuda tempo">⏱ Leva menos de 15 segundos</div>
+
+                    <div class="campo" id="campoNome">
+                        <label for="nome">Seu nome</label>
+                        <input type="text" id="nome" autocomplete="name" placeholder="Ex: Maria Silva" required>
+                        <div class="erro">Digite seu nome para continuar.</div>
+                    </div>
+
+                    <div class="campo" id="campoWhats">
+                        <label for="whatsapp">Seu WhatsApp</label>
+                        <input type="tel" id="whatsapp" autocomplete="tel" inputmode="numeric" placeholder="(98) 99999-9999" required>
+                        <div class="erro">Informe um WhatsApp válido com DDD.</div>
+                    </div>
+
+                    <div class="campo" id="campoServico">
+                        <label>O que você deseja higienizar/proteger?</label>
+                        <div class="grade-servico">
+                            <div class="opcao-servico">
+                                <input type="radio" name="servico" id="s1" value="Sofá">
+                                <label class="rotulo" for="s1"><span class="icone">🛋️</span> Sofá</label>
+                            </div>
+                            <div class="opcao-servico">
+                                <input type="radio" name="servico" id="s2" value="Colchão">
+                                <label class="rotulo" for="s2"><span class="icone">🛏️</span> Colchão</label>
+                            </div>
+                            <div class="opcao-servico">
+                                <input type="radio" name="servico" id="s3" value="Tapete">
+                                <label class="rotulo" for="s3"><span class="icone">🧶</span> Tapete</label>
+                            </div>
+                            <div class="opcao-servico">
+                                <input type="radio" name="servico" id="s4" value="Impermeabilização">
+                                <label class="rotulo" for="s4"><span class="icone">🛡️</span> Impermeabilização</label>
+                            </div>
+                            <div class="opcao-servico">
+                                <input type="radio" name="servico" id="s5" value="Estofado Automotivo">
+                                <label class="rotulo" for="s5"><span class="icone">🚗</span> Bancos de Carro</label>
+                            </div>
+                            <div class="opcao-servico">
+                                <input type="radio" name="servico" id="s6" value="Outro (Cadeiras, Poltronas...)">
+                                <label class="rotulo" for="s6"><span class="icone">✨</span> Outros</label>
+                            </div>
+                        </div>
+                        <div class="erro">Escolha uma opção para continuar.</div>
+                    </div>
+
+                    <button type="submit" class="btn-principal">Continuar →</button>
+
+                    <div class="confianca">
+                        <span>Sem compromisso</span>
+                        <span>Atendimento humano</span>
+                    </div>
+                </form>
+
+                <!-- ETAPA 2 -->
+                <form id="etapa2" class="etapa oculta">
+                    <button type="button" class="btn-voltar" id="btnVoltar">← Voltar</button>
+                    <div class="etapa-titulo">Quase lá!</div>
+                    <div class="etapa-ajuda">Detalhes para um orçamento preciso. <strong>(Não obrigatório)</strong></div>
+
+                    <div class="campo">
+                        <label for="cidade">Bairro ou Cidade <span class="opcional-tag">(opcional)</span></label>
+                        <input type="text" id="cidade" placeholder="Ex: Turu, Centro, Renascença">
+                    </div>
+
+                    <div class="campo">
+                        <label for="material">Tipo de Tecido <span class="opcional-tag">(opcional)</span></label>
+                        <input type="text" id="material" placeholder="Ex: Suede, Linho, Couro, Não sei">
+                    </div>
+
+                    <div class="campo">
+                        <label for="medidas">Quantidade / Tamanho <span class="opcional-tag">(opcional)</span></label>
+                        <input type="text" id="medidas" placeholder="Ex: Sofá de 3 lugares, 2 colchões">
+                    </div>
+
+                    <div class="campo">
+                        <label>Você possui fotos da peça? <span class="opcional-tag">(opcional)</span></label>
+                        <div class="grupo-fotos">
+                            <div class="opcao-servico" style="flex:1">
+                                <input type="radio" name="fotos" id="f1" value="Sim">
+                                <label class="rotulo" for="f1">📷 Sim</label>
+                            </div>
+                            <div class="opcao-servico" style="flex:1">
+                                <input type="radio" name="fotos" id="f2" value="Ainda não">
+                                <label class="rotulo" for="f2">🙅 Ainda não</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-principal" id="btnFinal">📲 Solicitar no WhatsApp</button>
+                </form>
+
+                <!-- TELA DE SUCESSO -->
+                <div class="sucesso" id="telaSucesso">
+                    <div class="icone-check">✓</div>
+                    <h2>Tudo Pronto!</h2>
+                    <p>Estamos redirecionando você para o WhatsApp. Se não abrir, clique no botão abaixo.</p>
+                    <button type="button" class="btn-principal" id="btnAbrirManual">Abrir WhatsApp Manualmente</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sessão Serviços (NOVO VÍDEO INTEIRO) -->
+    <section id="servicos" class="services">
+        <h2 class="section-title">O padrão exigido pela sua casa.</h2>
+        
+        <div class="bento-grid">
+            
+            <!-- Cartão 1: Higienização (Com Slider Automático no Topo) -->
+            <a href="https://wa.me/5598992103535?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20Higienização%20de%20Estofados." target="_blank" class="bento-card">
+                <div class="bento-media" id="higienizacao-slider">
+                    <!-- As imagens revezam automaticamente, sem texto em cima -->
+                    <img src="https://i.imgur.com/6GvISzp.jpg" alt="Sofá" class="auto-slide-img active">
+                    <img src="https://i.imgur.com/pbRZvag.jpg" alt="Tapete" class="auto-slide-img">
+                    <img src="https://i.imgur.com/U94J2ll.jpg" alt="Cortina" class="auto-slide-img">
+                </div>
+                
+                <div class="bento-content">
+                    <span class="selo">✦ O mais solicitado</span>
+                    <h3>Renovação de Estofados</h3>
+                    <p>Extração profunda em sofás, tapetes e cortinas. Arrancamos a sujeira e os odores pela raiz, devolvendo a textura e a beleza original ao seu ambiente.</p>
+                    <span class="btn-servico">Orçamento de Higienização</span>
+                </div>
+            </a>
+            
+            <!-- Cartão 2: Impermeabilização -->
+            <a href="https://wa.me/5598992103535?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20Blindagem%20e%20Impermeabilização." target="_blank" class="bento-card">
+                <div class="bento-media">
+                    <video autoplay loop muted playsinline>
+                        <source src="https://i.imgur.com/Jrtndp0.mp4" type="video/mp4">
+                    </video>
+                </div>
+                
+                <div class="bento-content">
+                    <span class="selo" style="background-color: #2c3e50;">🛡️ 1 Ano de Garantia</span>
+                    <h3>Blindagem Premium</h3>
+                    <p>Uma barreira de proteção invisível que repele líquidos e evita acidentes permanentes. Preserve seu investimento e aumente a vida útil do seu móvel.</p>
+                    <span class="btn-servico">Blindar meu Estofado</span>
+                </div>
+            </a>
+
+            <!-- Cartão 3: Limpeza Pós-Obra (Com Imagem Fixa no Topo) -->
+            <a href="https://wa.me/5598992103535?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20a%20Limpeza%20Pós-Obra." target="_blank" class="bento-card">
+                <div class="bento-media">
+                    <img src="https://i.imgur.com/TxWdfTS.jpg" alt="Limpeza Pós-Obra">
+                </div>
+                
+                <div class="bento-content">
+                    <span class="selo" style="background-color: #7f8c8d;">✨ Fino Trato</span>
+                    <h3>Limpeza Pós-Obra</h3>
+                    <p>Remoção de resíduos pesados e da incômoda poeira fina. Deixamos seu novo espaço perfeitamente limpo e preparado para a sua mudança.</p>
+                    <span class="btn-servico">Orçamento Pós-Obra</span>
+                </div>
+            </a>
+            
+        </div>
+    </section>
+
+    <!-- Sessão Sobre a Empresa -->
+    <section id="sobre" class="about">
+        <div class="about-img">
+            <img src="https://i.imgur.com/PZdqIGm.jpeg" alt="Saulo - Fundador da Tudo Limpo">
+            <div class="founder-badge">Saulo, Fundador</div>
+        </div>
+        <div class="about-text">
+            <h2>Compromisso inegociável com a sua saúde.</h2>
+            <p>A <strong>Tudo Limpo</strong> nasceu para redefinir o mercado de cuidados com estofados. Nós não fazemos apenas limpezas superficiais; nós aplicamos engenharia de higienização para promover saúde e bem-estar no lugar mais importante do mundo: a sua casa.</p>
+            <p>Com maquinário de extração de alto desempenho e uma linha de produtos premium — 100% biodegradáveis e seguros para bebês e animais de estimação —, nós desintoxicamos o seu ambiente, eliminando fungos, ácaros e bactérias responsáveis por alergias.</p>
+            <p>A excelência técnica e a transparência absoluta no atendimento nos tornaram a escolha número um de famílias e empresas exigentes.</p>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section id="diferenciais" class="differentials">
+        <h2 class="section-title">O diferencial da nossa tecnologia</h2>
+        <div class="diff-container">
+            <div class="diff-item">
+                <h4>Pronto para uso em horas</h4>
+                <p>Nossas extratoras de alta potência sugam até as camadas mais profundas, garantindo uma secagem ultrarrápida no mesmo dia.</p>
+            </div>
+            <div class="diff-item">
+                <h4>Segurança para sua família</h4>
+                <p>Fórmulas exclusivas e ecologicamente corretas. Sem riscos de intoxicação, sem cheiro forte, totalmente seguro para pets e crianças.</p>
+            </div>
+            <div class="diff-item">
+                <h4>Profissionalismo e Precisão</h4>
+                <p>Respeitamos sua agenda. Execução silenciosa, agendamento pontual e a garantia de que seu ambiente ficará organizado.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dúvidas Frequentes (FAQ) -->
+    <section id="faq" class="faq">
+        <h2 class="section-title">Dúvidas Frequentes</h2>
+        <div class="faq-container">
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    O serviço é feito no meu endereço?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Sim! Todo o nosso processo de higienização e impermeabilização é realizado no conforto da sua casa ou empresa. Nossa equipe leva todos os equipamentos e produtos necessários, sem que você precise transportar nenhum móvel.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Quanto tempo leva para o estofado secar?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Utilizamos maquinário de extração de alto poder que remove a maior parte da umidade. Dependendo da ventilação do ambiente e do tipo de tecido, o móvel estará totalmente seco e pronto para uso entre 4 a 8 horas após a conclusão do serviço.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Os produtos fazem mal para crianças ou pets?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        De forma alguma. Priorizamos a saúde da sua família. Utilizamos apenas produtos biodegradáveis, dermatologicamente testados, com odor suave e agradável, sendo 100% seguros para crianças, idosos e animais de estimação.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Como funciona a garantia da Impermeabilização?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Nossa blindagem/impermeabilização possui garantia documentada de 1 ano contra derramamento acidental de líquidos em temperatura ambiente (água, sucos, vinhos, etc). Caso ocorra algum incidente e o tecido absorva o líquido dentro desse período, nós refazemos o serviço sem custo adicional.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Preciso sair de casa durante a limpeza?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Não é necessário. Nossas máquinas possuem tecnologia de baixo ruído e, como nossos produtos não são tóxicos e têm um aroma muito agradável, você e sua família podem permanecer no ambiente tranquilamente durante a execução.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Prova Social (Nova Grade de Sliders) -->
+    <section id="avaliacoes" class="social-proof">
+        <h2 class="section-title">Resultados que comprovam</h2>
+        <p style="margin-top: -30px; margin-bottom: 30px; color: var(--text-light);">Arraste a barra central e veja a transformação real dos nossos serviços.</p>
+        
+        <div class="sliders-grid">
+            
+            <!-- Slider 1: Sofá -->
+            <div class="slider-wrapper">
+                <h4 class="slider-title">Restruturação de Sofá</h4>
+                <div class="slider-container">
+                    <img src="https://i.imgur.com/mcdCmrH.jpg" alt="Sofá Antes" class="slider-img img-before">
+                    <img src="https://i.imgur.com/aoLDxJq.jpg" alt="Sofá Depois" class="slider-img img-after">
+                    
+                    <input type="range" min="0" max="100" value="50" class="slider-input">
+                    <div class="slider-line"></div>
+                </div>
+            </div>
+
+            <!-- Slider 2: Colchão -->
+            <div class="slider-wrapper">
+                <h4 class="slider-title">Desinfecção de Colchão</h4>
+                <div class="slider-container">
+                    <img src="https://i.imgur.com/uuUOTKN.jpg" alt="Colchão Antes" class="slider-img img-before">
+                    <img src="https://i.imgur.com/lEhJix3.jpg" alt="Colchão Depois" class="slider-img img-after">
+                    
+                    <input type="range" min="0" max="100" value="50" class="slider-input">
+                    <div class="slider-line"></div>
+                </div>
+            </div>
+
+            <!-- Slider 3: Pós Obra -->
+            <div class="slider-wrapper">
+                <h4 class="slider-title">Finalização Pós-Obra</h4>
+                <div class="slider-container">
+                    <img src="https://i.imgur.com/rSrUdEU.jpg" alt="Pós Obra Antes" class="slider-img img-before">
+                    <img src="https://i.imgur.com/TxWdfTS.jpg" alt="Pós Obra Depois" class="slider-img img-after">
+                    
+                    <input type="range" min="0" max="100" value="50" class="slider-input">
+                    <div class="slider-line"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Rodapé Escuro Profissional -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo">
+                    <img src="https://i.imgur.com/1kGtO86.png" alt="Logo Tudo Limpo">
+                </div>
+                <p>Especialistas em renovar tapetes e estofados, proteger sua família e garantir um ambiente limpo, seguro e saudável.</p>
+                
+                <div class="footer-info-extra">
+                    <p><i class="fa-solid fa-location-dot"></i> <strong>São Luís - MA</strong></p>
+                    <p><i class="fa-solid fa-file-invoice"></i> CNPJ: <strong>49.769.401/0001-08</strong></p>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Contato & Redes</h4>
+                <a href="https://www.instagram.com/tudolimpobrasilslz" target="_blank" class="footer-link">
+                    <i class="fa-brands fa-instagram"></i> Siga @tudolimpobrasilslz
+                </a>
+                <a href="https://wa.me/5598992103535" target="_blank" class="footer-link">
+                    <i class="fa-brands fa-whatsapp"></i> Fale no WhatsApp
+                </a>
+                <a href="https://maps.app.goo.gl/EoeEnTjatN3sfgkh9" target="_blank" class="footer-link" style="margin-top: 10px;">
+                    <i class="fa-solid fa-map-location-dot"></i> Nossa Sede (Maps)
+                </a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Horário de Atendimento</h4>
+                <ul class="hours-list">
+                    <li>
+                        <span class="day"><i class="fa-regular fa-clock"></i> Seg a Sáb</span>
+                        <span class="time">08h às 19h</span>
+                    </li>
+                    <li>
+                        <span class="day" style="color: #ff4757;"><i class="fa-solid fa-ban"></i> Domingo</span>
+                        <span class="time" style="color: #ff4757; font-weight: 600;">Fechado</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2026 Tudo Limpo Brasil. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/5598992103535?text=Olá!%20Vi%20o%20site%20de%20vocês%20e%20gostaria%20de%20um%20orçamento." target="_blank" class="whatsapp-float">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Lógica JavaScript -->
+    <script>
+        const NUMERO_WHATSAPP = "5598992103535"; 
+
+        // 1. Script do Formulário Inteligente
+        const etapa1 = document.getElementById('etapa1');
+        const etapa2 = document.getElementById('etapa2');
+        const telaSucesso = document.getElementById('telaSucesso');
+        const barra1 = document.getElementById('barra1');
+        const barra2 = document.getElementById('barra2');
+        const legendaEtapa = document.getElementById('legendaEtapa');
+        const btnVoltar = document.getElementById('btnVoltar');
+
+        let dados = {};
+
+        barra1.style.width = '100%';
+        barra2.style.width = '0%';
+
+        const inputWhats = document.getElementById('whatsapp');
+        inputWhats.addEventListener('input', () => {
+            let v = inputWhats.value.replace(/\D/g, '').slice(0, 11);
+            if (v.length > 6) {
+                v = v.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
+            } else if (v.length > 2) {
+                v = v.replace(/(\d{2})(\d{0,5})/, '($1) $2');
+            } else if (v.length > 0) {
+                v = v.replace(/(\d{0,2})/, '($1');
+            }
+            inputWhats.value = v;
+        });
+
+        function mostrarErro(campoId, mostrar){
+            document.getElementById(campoId).classList.toggle('invalido', mostrar);
+        }
+
+        etapa1.addEventListener('submit', function(e){
+            e.preventDefault();
+            const nome = document.getElementById('nome').value.trim();
+            const whats = inputWhats.value.replace(/\D/g, '');
+            const servicoEl = document.querySelector('input[name="servico"]:checked');
+
+            let valido = true;
+            if (nome.length < 2){ mostrarErro('campoNome', true); valido = false; } else { mostrarErro('campoNome', false); }
+            if (whats.length < 10){ mostrarErro('campoWhats', true); valido = false; } else { mostrarErro('campoWhats', false); }
+            if (!servicoEl){ mostrarErro('campoServico', true); valido = false; } else { mostrarErro('campoServico', false); }
+
+            if (!valido) return;
+
+            dados.nome = nome; dados.whatsapp = whats; dados.servico = servicoEl.value;
+
+            etapa1.classList.add('oculta');
+            etapa2.classList.remove('oculta');
+            
+            barra1.style.width = '100%';
+            barra2.style.width = '100%';
+            legendaEtapa.textContent = 'Etapa 2 de 2';
+        });
+
+        btnVoltar.addEventListener('click', function(){
+            etapa2.classList.add('oculta');
+            etapa1.classList.remove('oculta');
+            
+            barra1.style.width = '100%';
+            barra2.style.width = '0%';
+            legendaEtapa.textContent = 'Etapa 1 de 2';
+        });
+
+        let linkFinal = '';
+        etapa2.addEventListener('submit', function(e){
+            e.preventDefault();
+
+            const cidade = document.getElementById('cidade').value.trim();
+            const material = document.getElementById('material').value.trim();
+            const medidas = document.getElementById('medidas').value.trim();
+            const fotosEl = document.querySelector('input[name="fotos"]:checked');
+
+            let mensagem = `Olá da Tudo Limpo! Gostaria de solicitar um orçamento.\n\n`;
+            mensagem += `👤 *Nome:* ${dados.nome}\n`;
+            mensagem += `📞 *WhatsApp:* ${dados.whatsapp}\n`;
+            mensagem += `✨ *Serviço:* ${dados.servico}\n`;
+            if (cidade)   mensagem += `📍 *Bairro:* ${cidade}\n`;
+            if (material) mensagem += `🧵 *Tecido:* ${material}\n`;
+            if (medidas)  mensagem += `📏 *Tamanho:* ${medidas}\n`;
+            if (fotosEl)  mensagem += `📸 *Possui fotos?* ${fotosEl.value}\n`;
+
+            linkFinal = `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(mensagem)}`;
+
+            etapa2.classList.add('oculta');
+            telaSucesso.classList.add('visivel');
+
+            window.open(linkFinal, '_blank');
+        });
+
+        document.getElementById('btnAbrirManual').addEventListener('click', function(){
+            if (linkFinal) window.open(linkFinal, '_blank');
+        });
+
+        // 2. Script para Slider Automático da "Higienização"
+        const bgSlides = document.querySelectorAll('.auto-slide-img');
+        if (bgSlides.length > 0) {
+            let currentBgSlide = 0;
+            setInterval(() => {
+                bgSlides[currentBgSlide].classList.remove('active');
+                currentBgSlide = (currentBgSlide + 1) % bgSlides.length;
+                bgSlides[currentBgSlide].classList.add('active');
+            }, 3000); // Troca a imagem a cada 3 segundos suavemente
+        }
+
+        // 3. Script para os MÚLTIPLOS Sliders Antes/Depois
+        const sliders = document.querySelectorAll('.slider-container');
+        sliders.forEach(container => {
+            const sliderInput = container.querySelector('.slider-input');
+            const imgAfter = container.querySelector('.img-after');
+            const sliderLine = container.querySelector('.slider-line');
+
+            sliderInput.addEventListener('input', (e) => {
+                const sliderValue = e.target.value;
+                imgAfter.style.clipPath = `polygon(${sliderValue}% 0, 100% 0, 100% 100%, ${sliderValue}% 100%)`;
+                sliderLine.style.left = `${sliderValue}%`;
+            });
+        });
+
+        // 4. Script do FAQ (Acordeão)
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                faqItems.forEach(i => {
+                    if (i !== item && i.classList.contains('active')) {
+                        i.classList.remove('active');
+                        i.querySelector('.faq-answer').style.maxHeight = null;
+                    }
+                });
+
+                item.classList.toggle('active');
+                
+                const answer = item.querySelector('.faq-answer');
+                if (item.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                } else {
+                    answer.style.maxHeight = null;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
